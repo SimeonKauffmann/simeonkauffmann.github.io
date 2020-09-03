@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Gayathri:wght@700&display=swap");
+
+$Navy: #2a2f3c;
+$Yellow: #e9b935;
+$Green: #8ce39c;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-indent: 0;
+  outline: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(#faebc1, $Yellow);
+  background-attachment: fixed;
+}
+
+header {
+  height: 3rem;
+  background-color: rgba($Navy, 0.1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#logo {
+  margin-top: 1rem;
+  margin-left: 3rem;
+  width: 3rem;
+  height: auto;
+}
+
+#top {
+  justify-content: center;
+  min-height: 100vh;
+  h1 {
+    padding-top: 5rem;
+    font: bold 2.5rem "Gayathri", sans-serif;
+    color: rgba($Navy, 1);
+    text-align: center;
+  }
+  h2 {
+    @extend h1;
+    padding-top: 0;
+    font-size: 1.3rem;
+  }
+}
+
+section#middle {
+  display: flex;
+  background-color: $Yellow;
+  justify-content: space-between;
+  min-height: 60vh;
+}
+
+#intro {
+  text-align: center;
+  font-family: "Gayathri", sans-serif;
+  color: white;
+  background-color: $Yellow;
+  div {
+    max-width: 80vw;
+    margin: auto;
+    h2 {
+      padding: 2rem;
+    }
+    p {
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+.info {
+  margin: 10px;
+  transform: translateY(2rem);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+  border: solid rgba($Navy, 0.5) 0.5px;
+  border-bottom: none;
+  background-color: white;
+  h2 {
+    font: bold 1rem "Roboto", sans-serif;
+  }
+  p {
+    @extend h2;
+    font-weight: normal;
+    font-size: 0.6rem;
+  }
+}
+
+#projects {
+  min-height: 100vh;
+  background: linear-gradient(#fff, rgba(255, 255, 255, 0));
+}
+
+footer {
+  min-height: 33vh;
+  background-color: $Green;
+}
