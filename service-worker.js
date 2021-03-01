@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.b3f2d06bc0f6679e454c6c80c6e05668.js"
+  "precache-manifest.1eb67de10dca61e928bd32f17222f1e5.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "new-hope"});
@@ -34,4 +34,4 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute("https://date.nager.at/api/v2/publicholidays/2021/SE", new workbox.strategies.NetworkFirst({ "networkTimeoutSeconds":5, plugins: [] }), 'GET');
-workbox.routing.registerRoute("http://061844f18b6a.ngrok.io/events/", new workbox.strategies.NetworkFirst({ "networkTimeoutSeconds":5, plugins: [] }), 'GET');
+workbox.routing.registerRoute("https://061844f18b6a.ngrok.io/events/", new workbox.strategies.NetworkFirst({ "networkTimeoutSeconds":5, plugins: [] }), 'GET');
