@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.00010c7ce70a4b5afeb64b727e2205a1.js"
+  "precache-manifest.b3f2d06bc0f6679e454c6c80c6e05668.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "pokemon"});
+workbox.core.setCacheNameDetails({prefix: "new-hope"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
@@ -33,4 +33,5 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute("https://pokeapi.co/api/v2/pokemon?limit=150&offset=0", new workbox.strategies.NetworkFirst({ "networkTimeoutSeconds":5, plugins: [] }), 'GET');
+workbox.routing.registerRoute("https://date.nager.at/api/v2/publicholidays/2021/SE", new workbox.strategies.NetworkFirst({ "networkTimeoutSeconds":5, plugins: [] }), 'GET');
+workbox.routing.registerRoute("http://061844f18b6a.ngrok.io/events/", new workbox.strategies.NetworkFirst({ "networkTimeoutSeconds":5, plugins: [] }), 'GET');
